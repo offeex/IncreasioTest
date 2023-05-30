@@ -1,4 +1,4 @@
-const yearsRange = 3
+export const yearsRange = 3
 
 const categories: ICategoryData[] = [
 	{ name: "Hot tubs", yearlyIncomeData: genYears() },
@@ -24,7 +24,6 @@ export const revenueStream: IRevenueStream = {
     averageOutcome,
     averageRevenue
 }
-console.log(revenueStream);
 
 function getAverageRevenue(year: number): IAverageRevenueData {
 
@@ -46,8 +45,8 @@ function getAverageRevenue(year: number): IAverageRevenueData {
 function getAverageOutcome(year: number): IAverageOutcomeData {
     return {
         year,
-        averageOutcome: Math.round(Math.random() * 10000),
-        outcomeChange: Math.round(Math.random() * 10000)
+        averageOutcome: Math.round(Math.random() * 100),
+        outcomeChange: Math.round(Math.random() * 80)
     }
 }
 
@@ -113,7 +112,7 @@ function genMonthlyIncome(year: number, month: number): IMonthlyIncomeData {
 function genDailyIncome(day: number): IDailyIncomeData {
 	return {
 		day,
-		revenue: Math.round(Math.random() * 100000),
+		revenue: Math.round(Math.random() * Math.max(999, 400)),
 	};
 }
 

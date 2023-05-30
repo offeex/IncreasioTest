@@ -1,3 +1,4 @@
+// називаеться DailyIncome, а в пропертях: revenue
 interface IDailyIncomeData {
     day: number;
     revenue: number;
